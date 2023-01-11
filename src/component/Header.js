@@ -81,28 +81,39 @@ export default function Header(props: Props) {
             MUI
             </Typography>
             
-            <Box sx={{ display: { xs: 'none', md: 'block' } }}>
-              <img src="https://i.ibb.co/JsvBDwD/logo.png"
-               style={{
-                width: '150px',
-             }}  alt="" />
-            </Box>
-            <Box sx={{ display: { xs: 'none', md: 'block' } }}>
-              
-            {navItems.map((item) => (
-              <Button key={item} sx={{ color:'primary.main' }} variant="text">
-                {item}
-              </Button>
-              
-            ))}
-                <Button
+            
+            <Box sx={{width:'100%', display:'flex', justifyContent:'space-between'}}>
+            <Box
+                     sx={{  display: { xs: 'none', marginLeft:'-60px', md: 'block' } }}
+                  >
+                     <img
+                        src='https://i.ibb.co/JsvBDwD/logo.png'
+                        alt=''
+                        style={{
+                           width: '150px',
+                        }}
+                     />
+                  </Box>
+                  <Box sx={{ display: { xs: 'none', md: 'block' } }}>
+                     {navItems.map((item) => (
+                        <Button
+                           key={item}
+                           sx={{ color: 'primary.main' }}
+                           variant='text'
+                        >
+                           {item}
+                        </Button>
+                     ))}
+                     <Button
                         sx={{
                            bgcolor: 'primary.green',
                         }}
                      >
                         Login
                      </Button>
-            </Box>
+                  </Box>
+            
+           </Box>
             
           </Toolbar>
           
